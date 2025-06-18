@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-500: #6c63ff;
+  --color-gray-300: #FBFCFD;
+  --color-gray-400: #E9EEF4;
+}
+
+.wrapper {
+  @apply w-full max-w-[1280px];
+}
+
+.content {
+  animation: slideInLeft 1s ease-out;
+}
+
+.illus {
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
